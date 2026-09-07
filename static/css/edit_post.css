@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+min-height: 100vh;
+
+background: #0d1020;
+color: white;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+/* Edit Container */
+
+.edit-container {
+width: 100%;
+max-width: 550px;
+
+background: #171b2e;
+
+padding: 30px;
+
+border-radius: 14px;
+
+border: 1px solid #292e45;
+
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+}
+
+/* Heading */
+
+.edit-container h2 {
+font-size: 24px;
+margin-bottom: 25px;
+}
+
+/* Form */
+
+.edit-container form p {
+margin-bottom: 18px;
+}
+
+.edit-container label {
+display: block;
+
+margin-bottom: 7px;
+
+color: #c8ccdc;
+
+font-size: 14px;
+
+}
+
+/* Input / Textarea */
+
+.edit-container input,
+.edit-container textarea,
+.edit-container select {
+width: 100%;
+
+padding: 12px 14px;
+
+background: #0f1324;
+
+border: 1px solid #30364f;
+
+border-radius: 8px;
+
+color: white;
+
+outline: none;
+
+font-size: 14px;
+
+}
+
+.edit-container textarea {
+min-height: 120px;
+resize: vertical;
+}
+
+.edit-container input:focus,
+.edit-container textarea:focus,
+.edit-container select:focus {
+border-color: #6c63ff;
+}
+
+/* Update Button */
+
+.edit-container button {
+width: 100%;
+
+margin-top: 5px;
+
+padding: 12px;
+
+background: #6c63ff;
+
+color: white;
+
+border: none;
+
+border-radius: 8px;
+
+font-size: 14px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.2s;
+
+}
+
+.edit-container button:hover {
+background: #574fe6;
+}
+
+/* Cancel */
+
+.edit-container > a {
+display: block;
+
+margin-top: 15px;
+
+text-align: center;
+
+color: #aeb4ca;
+
+text-decoration: none;
+
+font-size: 14px;
+
+}
+
+.edit-container > a:hover {
+color: white;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+.edit-container {
+    width: calc(100% - 30px);
+    padding: 22px;
+}
+
+.edit-container h2 {
+    font-size: 21px;
+}
+
+}

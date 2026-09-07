@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+
+min-height: 100vh;
+
+background: #0d1020;
+color: white;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+/* Delete Container */
+
+.delete-container {
+width: 100%;
+max-width: 480px;
+
+background: #171b2e;
+
+padding: 30px;
+
+border-radius: 14px;
+
+border: 1px solid #292e45;
+
+text-align: center;
+
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Warning Icon */
+
+.warning-icon {
+width: 55px;
+height: 55px;
+
+margin: 0 auto 20px;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+background: #30202a;
+
+border-radius: 50%;
+
+font-size: 27px;
+
+}
+
+/* Heading */
+
+.delete-container h2 {
+font-size: 24px;
+margin-bottom: 12px;
+}
+
+/* Description */
+
+.delete-container > p {
+color: #a7acc0;
+
+font-size: 14px;
+
+line-height: 1.6;
+
+margin-bottom: 22px;
+
+}
+
+/* Post Preview */
+
+.post-preview {
+text-align: left;
+
+background: #0f1324;
+
+border: 1px solid #30364f;
+
+padding: 15px;
+
+border-radius: 9px;
+
+margin-bottom: 22px;
+
+}
+
+.post-preview strong {
+font-size: 14px;
+}
+
+.post-preview p {
+margin-top: 8px;
+
+color: #c8ccdc;
+
+font-size: 14px;
+
+line-height: 1.5;
+
+}
+
+/* Delete Button */
+
+.delete-btn {
+width: 100%;
+
+padding: 12px;
+
+background: #d64545;
+
+color: white;
+
+border: none;
+
+border-radius: 8px;
+
+font-size: 14px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition: 0.2s;
+
+}
+
+.delete-btn:hover {
+background: #b93636;
+}
+
+/* Cancel Button */
+
+.cancel-btn {
+display: block;
+
+width: 100%;
+
+margin-top: 12px;
+
+padding: 12px;
+
+background: #252a40;
+
+color: #c8ccdc;
+
+border-radius: 8px;
+
+text-decoration: none;
+
+font-size: 14px;
+
+transition: 0.2s;
+
+}
+
+.cancel-btn:hover {
+background: #30364f;
+
+color: white;
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+.delete-container {
+    width: calc(100% - 30px);
+
+    padding: 24px;
+}
+
+.delete-container h2 {
+    font-size: 21px;
+}
+
+
+}

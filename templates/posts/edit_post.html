@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Post</title>
+    <link rel="stylesheet" href="{% static 'css/edit_post.css' %}">
+</head>
+
+<body>
+
+<div class="edit-container">
+
+    <h2>Edit Post</h2>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">
+            Update Post
+        </button>
+
+    </form>
+
+    <a href="{% url 'homeView' %}">
+        Cancel
+    </a>
+
+</div>
+
+</body>
+</html>

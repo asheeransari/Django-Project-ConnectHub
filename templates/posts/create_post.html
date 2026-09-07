@@ -1,0 +1,82 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Post | ConnectHub</title>
+
+    <link rel="stylesheet" href="{% static 'css/create_post.css' %}">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="post-card">
+
+            <div class="header">
+                <h1>Create a Post</h1>
+                <p>Share something with your friends</p>
+            </div>
+
+            <form method="POST"
+                  action="{% url 'create_post_View' %}"
+                  enctype="multipart/form-data">
+
+                {% csrf_token %}
+
+                {% if form.non_field_errors %}
+                    <div class="error">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+
+                <div class="form-group">
+                    <label for="{{ form.content.id_for_label }}">
+                        What's on your mind?
+                    </label>
+
+                    {{ form.content }}
+
+                    {% if form.content.errors %}
+                        <div class="error">
+                            {{ form.content.errors }}
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                <label for="image">
+                Add an image
+                </label>
+                <input
+                type="file"
+                name="image"
+                id="image"
+                accept="image/*"
+                >
+                </div>
+
+                <div class="buttons">
+
+                    <a href="{% url 'homeView' %}" class="cancel-btn">
+                        Cancel
+                    </a>
+
+                    <button type="submit" class="post-btn">
+                        Create Post
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

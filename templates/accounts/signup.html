@@ -1,0 +1,74 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | ConnectHub</title>
+
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <div class="auth-card">
+
+            <h1>Join ConnectHub</h1>
+
+            <p class="subtitle">
+                Create your account and start connecting
+            </p>
+
+            {% if messages %}
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+            {% endif %}
+
+            <form method="POST" action="{% url 'signupView' %}">
+            {% csrf_token %}
+
+            <div>
+            {{ form.username.label_tag }}
+            {{ form.username }}
+            {{ form.username.errors }}
+            </div>
+
+            <div>
+            {{ form.password1.label_tag }}
+            {{ form.password1 }}
+            {{ form.password1.errors }}
+            </div>
+
+            <div>
+            {{ form.password2.label_tag }}
+            {{ form.password2 }}
+            {{ form.password2.errors }}
+            </div>
+
+            <div>
+            {{ form.email.label_tag }}
+            {{ form.email }}
+            {{ form.email.errors }}
+            </div>
+
+            <button type="submit">
+            Create Account
+            </button>
+            </form>
+
+            <p class="bottom-text">
+                Already have an account?
+                <a href="{% url 'loginView' %}">Login</a>
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+</head>
+
+<body>
+
+<div class="profile-container">
+
+    <div class="profile-card">
+
+        <div class="profile-header">
+            <div class="avatar">
+                {{ user.username|first|upper }}
+            </div>
+
+            <h1>{{ user.username }}</h1>
+            <p>My Profile</p>
+        </div>
+
+        <div class="profile-info">
+
+            <div class="info-box">
+                <span>Username</span>
+                <strong>{{ user.username }}</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Email</span>
+                <strong>{{ user.email }}</strong>
+            </div>
+
+            <div class="info-box">
+                <span>First Name</span>
+                <strong>{{ user.first_name|default:"Not provided" }}</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Last Name</span>
+                <strong>{{ user.last_name|default:"Not provided" }}</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Date Created</span>
+                <strong>{{ user.date_joined|date:"d M Y" }}</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Last Login</span>
+                <strong>
+                    {{ user.last_login|date:"d M Y, h:i A"|default:"Not available" }}
+                </strong>
+            </div>
+
+        </div>
+
+        <a href="{% url 'homeView' %}" class="back-btn">Back to Home</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
