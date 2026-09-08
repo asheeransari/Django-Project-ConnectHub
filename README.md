@@ -352,3 +352,9 @@ This project helped build practical understanding of Django from project setup t
 - Logging
 - Performance monitoring
 - Basic production preparation
+
+## Author
+
+**Asheer Ahmad** <br>
+B.Tech Graduate | Junior Full Stack Developer <br>
+🔗 [LinkedIn](https://www.linkedin.com/in/asheer-ansari)
